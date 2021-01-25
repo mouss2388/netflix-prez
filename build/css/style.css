@@ -13,6 +13,7 @@
 }
 body {
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 4fr;
   grid-template-areas: "header header" "main main";
@@ -28,8 +29,13 @@ body {
   margin: 20px 40px;
 }
 
+.hidden {
+  display: none;
+}
+
 /*************  HEADER CONTENT *******************/
 header {
+  position: relative;
   height: 100%;
   width: 100%;
   grid-area: header;

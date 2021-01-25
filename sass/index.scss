@@ -20,6 +20,7 @@ $margin-height: $margin-width / 2;
 
 body {
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 4fr;
   grid-template-areas:
@@ -37,9 +38,14 @@ body {
   margin: $margin-height $margin-width;
 }
 
+
+.hidden {
+  display: none;
+}
 /*************  HEADER CONTENT *******************/
 
 header {
+  position: relative;
   height: 100%;
   width: 100%;
 
@@ -224,3 +230,4 @@ main {
     }
   }
 }
+
