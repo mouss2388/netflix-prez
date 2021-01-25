@@ -1,6 +1,9 @@
 const listItems = document.getElementsByClassName("item-list");
-const btn_video = document.getElementsByClassName("btn");
+const btn_video = document.getElementsByClassName("btn-trailer");
 const video = document.querySelector("iframe");
+const profil_icon = document.querySelector(".search-tools .profil-icon");
+const menu = document.getElementsByClassName("menu");
+let show_menu = false;
 
 function getFullScreenElement() {
   return (
@@ -36,5 +39,29 @@ function gestionNav() {
     });
   }
 }
+
+profil_icon.addEventListener("mouseenter", () => {
+  menu.item(0).classList.remove("hidden");
+  showMenu = true;
+});
+
+profil_icon.addEventListener("mouseleave", () => {
+  setTimeout(() => {
+
+    menu.item(0).addEventListener("mouseenter", () => {
+      menu.item(0).classList.remove("hidden");
+      show_menu = true;
+    });
+    
+    menu.item(0).addEventListener("mouseleave", () => {
+      menu.item(0).classList.add("hidden");
+      show_menu = false;
+    });
+
+    if (!show_menu) {
+      menu.item(0).classList.add("hidden");
+    }
+  }, 1500);
+});
 
 gestionNav();
