@@ -182,7 +182,7 @@ main .trailer {
   height: auto;
   width: 100%;
 }
-main .trailer .btn {
+main .trailer .btn-trailer {
   margin-top: 10px;
   cursor: pointer;
   width: auto;
@@ -193,8 +193,11 @@ main .trailer .btn {
   font-size: 1rem;
   border: none;
 }
-main .trailer .btn i {
+main .trailer .btn-trailer i {
   vertical-align: middle;
+}
+main .trailer .btn-trailer:hover {
+  color: #b30710;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -214,7 +214,7 @@ main {
     height: auto;
     width: 100%;
 
-    .btn {
+    .btn-trailer {
       margin-top: 10px;
       cursor: pointer;
       i {
@@ -227,6 +227,9 @@ main {
       font-weight: bold;
       font-size: 1rem;
       border: none;
+      &:hover {
+        color: $red-netflix;
+      }
     }
   }
 }
