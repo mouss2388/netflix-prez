@@ -264,6 +264,44 @@ main {
       }
     }
   }
+
+}
+
+
+.menu {
+  position: absolute;
+  top:0;
+  right: 0;
+  margin: 65px 30px;
+  background-color: #040403af;
+  width: 110px;
+  color: white;
+
+  hr {
+    color: white;
+  }
+  img {
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  ul { 
+    li {
+      list-style: none;
+      padding: 5px;
+    }
+    li a {
+      font-size: 0.8rem;
+      text-decoration: none;
+
+      &:visited {
+        color: white;
+      }
+      &:hover {
+        color:$red-netflix
+      }
+    }
+  }
+  
 }
 
 .menu {

@@ -230,6 +230,37 @@ main .trailer .btn-trailer:hover {
   position: absolute;
   top: 0;
   right: 0;
+  margin: 65px 30px;
+  background-color: #040403af;
+  width: 110px;
+  color: white;
+}
+.menu hr {
+  color: white;
+}
+.menu img {
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.menu ul li {
+  list-style: none;
+  padding: 5px;
+}
+.menu ul li a {
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.menu ul li a:visited {
+  color: white;
+}
+.menu ul li a:hover {
+  color: #b30710;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
   margin: 50px 20px;
   background-color: #040403af;
   width: 110px;

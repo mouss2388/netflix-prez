@@ -4,10 +4,14 @@ const btn_video = document.getElementsByClassName("btn-trailer");
 const video = document.querySelector("iframe");
 const profil_icon = document.querySelector(".search-tools .profil-icon");
 const menu = document.getElementsByClassName("menu");
+<<<<<<< HEAD
 const btn_burger = document.querySelector(".btn-burger");
 
 let show_menu = false;
 let pos_active_link = 0;
+=======
+let show_menu = false;
+>>>>>>> 1c7d37ddb614b77b339e0152aef8bcccc96bdab3
 
 function getFullScreenElement() {
   return (
@@ -54,11 +58,21 @@ profil_icon.addEventListener("mouseenter", () => {
 
 profil_icon.addEventListener("mouseleave", () => {
   setTimeout(() => {
+<<<<<<< HEAD
+=======
+
+    console.log("menu 1" + show_menu);
+
+>>>>>>> 1c7d37ddb614b77b339e0152aef8bcccc96bdab3
     menu.item(0).addEventListener("mouseenter", () => {
       menu.item(0).classList.remove("hidden");
       show_menu = true;
     });
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 1c7d37ddb614b77b339e0152aef8bcccc96bdab3
     menu.item(0).addEventListener("mouseleave", () => {
       menu.item(0).classList.add("hidden");
       show_menu = false;
@@ -70,6 +84,7 @@ profil_icon.addEventListener("mouseleave", () => {
   }, 1500);
 });
 
+<<<<<<< HEAD
 
 btn_burger.addEventListener("click", () => {
   const nav_burger = document.getElementsByClassName("nav-burger");
@@ -80,3 +95,6 @@ btn_burger.addEventListener("click", () => {
 toggleActiveNav();
 
 
+=======
+gestionNav();
+>>>>>>> 1c7d37ddb614b77b339e0152aef8bcccc96bdab3
