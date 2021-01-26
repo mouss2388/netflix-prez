@@ -1,4 +1,19 @@
+@charset "UTF-8";
 /*********VARIABLES **************/
+.link-nav li a {
+  color: white;
+  text-decoration: none;
+}
+.link-nav li a:hover {
+  color: #b30710;
+}
+.link-nav li.active {
+  font-weight: bold;
+}
+.link-nav li.active a:hover {
+  cursor: default;
+}
+
 *,
 *::after,
 *::before {
@@ -26,7 +41,7 @@ body {
   background-position: left top;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  margin: 20px 40px;
+  margin: 0 0;
 }
 
 .hidden {
@@ -111,18 +126,28 @@ header ul li {
   display: inline-block;
   margin: 0 4px;
 }
-header ul li a {
+
+/*************Burger menu **********************/
+.menu-burger {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100px;
+  z-index: 3;
+  display: none;
+}
+.menu-burger .btn-burger i {
   color: white;
-  text-decoration: none;
+  background-color: transparent;
 }
-header ul li.active {
-  font-weight: bold;
+.menu-burger .nav-burger ul {
+  list-style: none;
+  width: 200px;
+  font-size: 14px;
+  background-color: #040403af;
 }
-header ul li.active a:hover {
-  cursor: default;
-}
-header ul li a:hover {
-  color: #b30710;
+.menu-burger .nav-burger ul li {
+  padding: 5px;
 }
 
 /*************  MAIN CONTENT *******************/
@@ -154,7 +179,7 @@ main ul li {
 }
 main ul li:nth-child(2) {
   color: white;
-  background-color: #e40914;
+  background-color: #ec0914;
 }
 main ul li:first-child:after {
   content: " | ";
@@ -170,7 +195,7 @@ main .buttons {
   margin: 10px 0;
 }
 main .buttons button {
-  background-color: #e40914;
+  background-color: #ec0914;
   color: white;
   font-weight: bold;
   border: none;
@@ -204,17 +229,17 @@ main .trailer .btn-trailer:hover {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 65px 30px;
+  margin: 50px 20px;
   background-color: #040403af;
   width: 110px;
-  color: white;
-}
-.menu hr {
   color: white;
 }
 .menu img {
   border-radius: 50%;
   vertical-align: middle;
+}
+.menu ul li:first-child {
+  border-bottom: 1px solid white;
 }
 .menu ul li {
   list-style: none;
@@ -229,6 +254,24 @@ main .trailer .btn-trailer:hover {
 }
 .menu ul li a:hover {
   color: #b30710;
+}
+
+/*************
+Desktop : au delà de 1024 pixels
+Tablette : entre 600 et 1024 pixels (en mode portrait)
+Mobile : entre 320 et 600 pixels (en mode portrait)
+***************/
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  .navigation-group ul {
+    display: none;
+  }
+
+  .menu-burger {
+    display: inherit;
+  }
+  .menu-burger .btn-burger:hover {
+    text-shadow: 0 0 8px #ec0914;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,13 @@
+const body = document.querySelector("body");
 const listItems = document.getElementsByClassName("item-list");
 const btn_video = document.getElementsByClassName("btn-trailer");
 const video = document.querySelector("iframe");
 const profil_icon = document.querySelector(".search-tools .profil-icon");
 const menu = document.getElementsByClassName("menu");
+const btn_burger = document.querySelector(".btn-burger");
+
 let show_menu = false;
+let pos_active_link = 0;
 
 function getFullScreenElement() {
   return (
@@ -27,7 +31,9 @@ btn_video.item(0).addEventListener("click", function () {
   video.requestFullscreen().catch((e) => {});
 });
 
-function gestionNav() {
+
+function toggleActiveNav() {
+  listItems.item(pos_active_link).classList.add("active");
   for (let index_target = 0; index_target < listItems.length; index_target++) {
     listItems.item(index_target).addEventListener("click", (e) => {
       `${e.currentTarget.classList.add("active")}`;
@@ -36,6 +42,7 @@ function gestionNav() {
           listItems.item(idx).classList.remove("active");
         }
       }
+      pos_active_link = index_target;
     });
   }
 }
@@ -47,12 +54,11 @@ profil_icon.addEventListener("mouseenter", () => {
 
 profil_icon.addEventListener("mouseleave", () => {
   setTimeout(() => {
-
     menu.item(0).addEventListener("mouseenter", () => {
       menu.item(0).classList.remove("hidden");
       show_menu = true;
     });
-    
+
     menu.item(0).addEventListener("mouseleave", () => {
       menu.item(0).classList.add("hidden");
       show_menu = false;
@@ -64,4 +70,13 @@ profil_icon.addEventListener("mouseleave", () => {
   }, 1500);
 });
 
-gestionNav();
+
+btn_burger.addEventListener("click", () => {
+  const nav_burger = document.getElementsByClassName("nav-burger");
+  nav_burger[0].classList.toggle("hidden");
+});
+
+
+toggleActiveNav();
+
+

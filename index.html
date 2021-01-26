@@ -45,8 +45,8 @@
             ><img src="/images/logo.png" alt="logo Netflix" class="logo"
           /></a>
           <div class="navigation-group">
-            <ul>
-              <li class="item-list active"><a href="#">Accueil</a></li>
+            <ul class="link-nav">
+              <li class="item-list"><a href="#">Accueil</a></li>
               <li class="item-list"><a href="#">Séries</a></li>
               <li class="item-list"><a href="#">Films</a></li>
               <li class="item-list">
@@ -75,7 +75,23 @@
           </div>
         </div>
       </nav>
-    </header> 
+    </header>
+
+    <div class="menu-burger">
+      <span class="btn-burger"><i class="fas fa-bars fa-2x"></i></span>
+
+      <div class="nav-burger link-nav hidden">
+        <ul>
+          <li class="item-list"><a href="#">Accueil</a></li>
+          <li class="item-list"><a href="#">Séries</a></li>
+          <li class="item-list"><a href="#">Films</a></li>
+          <li class="item-list">
+            <a href="#">Nouveautés les plus regardées</a>
+          </li>
+          <li class="item-list"><a href="#">Ma liste</a></li>
+        </ul>
+      </div>
+    </div>
 
     <main>
       <img src="/images/name.png" alt="disney mulan" class="title-movie" />
@@ -106,17 +122,29 @@
         </button>
       </div>
     </main>
-    <iframe class="hidden" width="560" height="315" src="https://www.youtube.com/embed/3_i9e_35Tu8?rel=0&amp;autoplay=1&mute=1" frameborder="0" autoplay muted  allowfullscreen></iframe>
+    <iframe
+      class="hidden"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/3_i9e_35Tu8?rel=0&amp;autoplay=1&mute=1"
+      frameborder="0"
+      autoplay
+      muted
+      allowfullscreen
+    ></iframe>
 
     <div class="menu hidden">
       <ul>
-        <li><a href="#"><img
-          class="profil-icon"
-          src="https://occ-0-56-55.1.nflxso.net/dnm/api/v6/0RO1pLmU93-gdXvuxd_iYjzPqkc/AAAABSAaWrKI6iV6lRy6yY0JFXpooEx8rLqL9-vW4KaxJSL1ihr9_g026iQukEy9DherOaFJY0HxxoppU65JaTZM-zE.png"
-          alt="logo casa de papel"
-        />Mustapha</a></li>
+        <li>
+          <a href="#"
+            ><img
+              class="profil-icon"
+              src="https://occ-0-56-55.1.nflxso.net/dnm/api/v6/0RO1pLmU93-gdXvuxd_iYjzPqkc/AAAABSAaWrKI6iV6lRy6yY0JFXpooEx8rLqL9-vW4KaxJSL1ihr9_g026iQukEy9DherOaFJY0HxxoppU65JaTZM-zE.png"
+              alt="logo casa de papel"
+            />Mustapha</a
+          >
+        </li>
         <li><a href="#">Gérer les profils</a></li>
-        <hr>
         <li><a href="#">Comptes</a></li>
         <li><a href="#">Centre d'aide</a></li>
         <li><a href="#">Se déconnecter</a></li>

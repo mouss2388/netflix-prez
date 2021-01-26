@@ -1,9 +1,29 @@
 /*********VARIABLES **************/
+
 $red-netflix: #b30710;
-$red: #e40914;
+$red: #ec0914;
 $grey: #777;
-$margin-width: 40px;
+$dark-menu: #040403af;
+$margin-width: 0;
 $margin-height: $margin-width / 2;
+
+.link-nav {
+  li {
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: $red-netflix;
+      }
+    }
+    &.active {
+      font-weight: bold;
+      a:hover {
+        cursor: default;
+      }
+    }
+  }
+}
 
 *,
 *::after,
@@ -37,7 +57,6 @@ body {
   font-size: 15px;
   margin: $margin-height $margin-width;
 }
-
 
 .hidden {
   display: none;
@@ -130,24 +149,35 @@ header {
       display: inline-block;
       margin: 0 4px;
     }
-    li a {
+  }
+}
+/*************Burger menu **********************/
+.menu-burger {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100px;
+  z-index: 3;
+  display: none;
+
+  .btn-burger {
+    i {
       color: white;
-      text-decoration: none;
+      background-color: transparent;
     }
-
-    li.active {
-      font-weight: bold;
-      a:hover {
-        cursor: default;
+  }
+  .nav-burger {
+    ul {
+      list-style: none;
+      width: 200px;
+      font-size: 14px;
+      background-color: $dark-menu;
+      li {
+        padding: 5px;
       }
-    }
-
-    li a:hover {
-      color: $red-netflix;
     }
   }
 }
-
 /*************  MAIN CONTENT *******************/
 
 main {
@@ -232,31 +262,31 @@ main {
       }
     }
   }
-
 }
-
 
 .menu {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
-  margin: 65px 30px;
+  margin: 50px 20px;
   background-color: #040403af;
   width: 110px;
   color: white;
 
-  hr {
-    color: white;
-  }
   img {
     border-radius: 50%;
     vertical-align: middle;
   }
-  ul { 
+  ul {
+    li:first-child {
+      border-bottom: 1px solid white;
+    }
+
     li {
       list-style: none;
       padding: 5px;
     }
+
     li a {
       font-size: 0.8rem;
       text-decoration: none;
@@ -265,10 +295,28 @@ main {
         color: white;
       }
       &:hover {
-        color:$red-netflix
+        color: $red-netflix;
       }
     }
   }
-  
 }
 
+/*************
+Desktop : au delà de 1024 pixels
+Tablette : entre 600 et 1024 pixels (en mode portrait)
+Mobile : entre 320 et 600 pixels (en mode portrait)
+***************/
+
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  .navigation-group ul {
+    display: none;
+  }
+  .menu-burger {
+    display: inherit;
+    .btn-burger {
+      &:hover {
+        text-shadow: 0 0 8px $red;
+      }
+    }
+  }
+}
