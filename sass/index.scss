@@ -4,7 +4,7 @@ $red-netflix: #b30710;
 $red: #ec0914;
 $grey: #777;
 $dark-menu: #040403af;
-$margin-width: 0;
+$margin-width: 1.2rem;
 $margin-height: $margin-width / 2;
 
 .link-nav {
@@ -54,7 +54,7 @@ body {
   background-clip: content-box;
   background-position: left top;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 0.95rem;
   margin: $margin-height $margin-width;
 }
 
@@ -78,7 +78,7 @@ header {
   }
 
   .logo {
-    width: 95px;
+    width: 80%;
     height: auto;
   }
 
@@ -159,12 +159,14 @@ header {
   width: 100px;
   z-index: 3;
   display: none;
+  margin-top: $margin-height;
+  margin-left: $margin-width;
 
   .btn-burger {
-    i {
-      color: white;
-      background-color: transparent;
-    }
+      i {
+        color: white;
+        background-color: transparent;
+      }
   }
   .nav-burger {
     ul {
@@ -302,15 +304,53 @@ main {
 }
 
 /*************
-Desktop : au delà de 1024 pixels
-Tablette : entre 600 et 1024 pixels (en mode portrait)
-Mobile : entre 320 et 600 pixels (en mode portrait)
+TABLETTE /PHONE MODE
 ***************/
 
-@media only screen and (max-width: 1024px) and (min-width: 600px) {
+@media only screen and (max-width: 1243px) and (min-width: 331px) {
+ 
   .navigation-group ul {
     display: none;
   }
+  .menu-burger {
+    display: inherit;
+    .btn-burger {
+      &:hover {
+        text-shadow: 0 0 8px $red;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 330px) and (min-width: 250px) {
+
+  .navigation-group ul,
+  .search-tools a,
+  .search-tools button
+  {
+    display: none;
+  }
+
+  
+  .menu-burger {
+    display: inherit;
+    .btn-burger {
+      &:hover {
+        text-shadow: 0 0 8px $red;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 249px) {
+
+  .navigation-group ul,
+  .search-tools *
+  {
+    display: none;
+  }
+
+  
   .menu-burger {
     display: inherit;
     .btn-burger {
